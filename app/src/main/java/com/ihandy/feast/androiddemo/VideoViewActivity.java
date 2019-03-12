@@ -17,7 +17,7 @@ public class VideoViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_video_view);
 
 
-        Uri uri = Uri.parse("http://dev-giftsfeast.appcloudbox.net/h5games/fruitacrush/other/fruits_640*1080_02.mp4");
+        Uri uri = Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
         VideoView videoView = (VideoView) this.findViewById(R.id.video_view);
         MediaController mediaController = new MediaController(this);
         mediaController.setVisibility(View.GONE);

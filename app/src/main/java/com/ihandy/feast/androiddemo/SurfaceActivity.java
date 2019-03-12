@@ -52,9 +52,9 @@ public class SurfaceActivity extends AppCompatActivity implements MediaPlayer.On
         player.setOnVideoSizeChangedListener(this);
         Log.v("Begin:::", "surfaceDestroyed called");
         //然后指定需要播放文件的路径，初始化MediaPlayer
-        String uri = "http://dev-giftsfeast.appcloudbox.net/h5games/fruitacrush/other/fruits_640*1080_02.mp4";
+        String uri = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
         try {
-            player.setDataSource("http://dev-giftsfeast.appcloudbox.net/h5games/fruitacrush/other/fruits_640*1080_02.mp4");
+            player.setDataSource("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
             //在指定了MediaPlayer播放的容器后，我们就可以使用prepare或者prepareAsync来准备播放了
             player.prepareAsync();
             Log.v("Next:::", "surfaceDestroyed called");
