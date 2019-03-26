@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">AndroidDemo</string>
+    <string name="app_name">FloatingWindow</string>
+
+    <string name="square_float_window_content">This is news!</string>
+    <string name="big_square_float_window_content">This is news!</string>
+
 </resources>
