@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".custom.FloatWindowService"></service>
+        <service android:name=".floatingwindow.MyFloatWindowService"/>
         <service android:name=".custom.FloatWindowService" />
     </application>
 

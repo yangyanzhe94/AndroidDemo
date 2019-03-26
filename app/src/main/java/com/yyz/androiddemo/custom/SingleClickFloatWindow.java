@@ -5,6 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -176,7 +179,14 @@ public class SingleClickFloatWindow extends View {
     private void initView() {
         //初始化视图
         paint = new Paint();
-        bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_games_black_24dp);
+
+
+        Drawable drawable = ContextCompat.getDrawable(context, R.mipmap.ic_launcher);
+        if (drawable instanceof BitmapDrawable) {
+            bitmap = BitmapFactory.decodeResource(context.getResources(),  R.mipmap.ic_launcher);
+        }else {
+            bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        }
 
         // 设置wrap_content的默认宽 / 高值
         // 默认宽/高的设定并无固定依据,根据需要灵活设置

@@ -51,7 +51,12 @@ public class FloatWindowManager {
         int screenWidth = windowManager.getDefaultDisplay().getWidth();
         int screenHeight = windowManager.getDefaultDisplay().getHeight();
         if (squareFloatWindow == null) {
-
+            int LAYOUT_FLAG;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                LAYOUT_FLAG = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+            } else {
+                LAYOUT_FLAG = WindowManager.LayoutParams.TYPE_PHONE;
+            }
             switch (flag) {
                 case BIG_SQUARE:
                     squareFloatWindow = new SquareFloatWindow(context, SquareFloatWindow.BIG);
@@ -62,7 +67,7 @@ public class FloatWindowManager {
             }
             if (squareFloatWindowParams == null) {
                 squareFloatWindowParams = new WindowManager.LayoutParams();
-                squareFloatWindowParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+                squareFloatWindowParams.type = LAYOUT_FLAG;
                 squareFloatWindowParams.format = PixelFormat.RGBA_8888;
                 squareFloatWindowParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
                         | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
