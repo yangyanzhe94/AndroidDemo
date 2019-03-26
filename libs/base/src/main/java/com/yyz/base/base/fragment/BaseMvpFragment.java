@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 
 import com.yyz.base.base.BasePresenter;
 
-import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/6/29.
@@ -13,7 +12,6 @@ import butterknife.Unbinder;
 
 public abstract class BaseMvpFragment<V, P extends BasePresenter<V>> extends BaseFragment {
     protected P mPresenter;
-    public Unbinder unbinder;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

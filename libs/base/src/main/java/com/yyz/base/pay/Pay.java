@@ -2,15 +2,12 @@ package com.yyz.base.pay;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.text.TextUtils;
 
 import com.alipay.sdk.app.PayTask;
 import com.yyz.base.base.BaseInfo;
 import com.yyz.base.base.BaseRunnable;
-import com.tencent.mm.opensdk.constants.Build;
-import com.tencent.mm.opensdk.modelpay.PayReq;
-import com.tencent.mm.opensdk.openapi.IWXAPI;
-import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -21,8 +18,8 @@ import org.greenrobot.eventbus.EventBus;
 public class Pay {
     private static StringBuilder stringBuilder;
     private static BaseRunnable baseRunnable;
-    private static IWXAPI msgApi;
-    private static PayReq req;
+//    private static IWXAPI msgApi;
+//    private static PayReq req;
 
     /**
      * 调用支付
@@ -39,7 +36,7 @@ public class Pay {
         if (payType == 1) {
             alipay(act, (AlipayInfo) baseInfo);
         } else if (payType == 2) {
-            payWX(act, (WXInfo) baseInfo);
+//            payWX(act, (WXInfo) baseInfo);
         } else {
             return false;
         }
@@ -144,33 +141,33 @@ public class Pay {
                 content.lastIndexOf("}"));
     }
 
-    /**
-     * 微信支付
-     *
-     * @param context 上下文
-     * @param wxInfo  支付信息
-     *
-     *    wxapi.WXPayEntryActivity  implements IWXAPIEventHandler  onResp回调监听
-     */
-    private static void payWX(Context context, WXInfo wxInfo) {
-        if (msgApi == null) {
-            msgApi = WXAPIFactory.createWXAPI(context, "key");
-        }
-        if (msgApi.isWXAppInstalled() && (msgApi.getWXAppSupportAPI() >= Build.PAY_SUPPORTED_SDK_INT)) {
-            req = new PayReq();
-            req.appId = wxInfo.getAppId();
-            req.partnerId = wxInfo.getPartnerId();
-            req.prepayId = wxInfo.getPrepayId();
-            req.nonceStr = wxInfo.getNonceStr();
-            req.timeStamp = wxInfo.getTimesTamp();
-            req.packageValue = wxInfo.getPackages();
-            req.sign = wxInfo.getSign();
-            if (!msgApi.sendReq(req)) {
-                EventBus.getDefault().post(new PayEvent(1,-1,"支付错误"));
-            }
-        } else {
-            EventBus.getDefault().post(new PayEvent(1,-1,2,"您尚未安装微信或者微信版本过低，建议去下载或升级至最新版后重试"));
-        }
-    }
+//    /**
+//     * 微信支付
+//     *
+//     * @param context 上下文
+//     * @param wxInfo  支付信息
+//     *
+//     *    wxapi.WXPayEntryActivity  implements IWXAPIEventHandler  onResp回调监听
+//     */
+//    private static void payWX(Context context, WXInfo wxInfo) {
+//        if (msgApi == null) {
+//            msgApi = WXAPIFactory.createWXAPI(context, "key");
+//        }
+//        if (msgApi.isWXAppInstalled() && (msgApi.getWXAppSupportAPI() >= Build.PAY_SUPPORTED_SDK_INT)) {
+//            req = new PayReq();
+//            req.appId = wxInfo.getAppId();
+//            req.partnerId = wxInfo.getPartnerId();
+//            req.prepayId = wxInfo.getPrepayId();
+//            req.nonceStr = wxInfo.getNonceStr();
+//            req.timeStamp = wxInfo.getTimesTamp();
+//            req.packageValue = wxInfo.getPackages();
+//            req.sign = wxInfo.getSign();
+//            if (!msgApi.sendReq(req)) {
+//                EventBus.getDefault().post(new PayEvent(1,-1,"支付错误"));
+//            }
+//        } else {
+//            EventBus.getDefault().post(new PayEvent(1,-1,2,"您尚未安装微信或者微信版本过低，建议去下载或升级至最新版后重试"));
+//        }
+//    }
 
 }

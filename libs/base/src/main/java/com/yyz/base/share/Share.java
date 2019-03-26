@@ -9,15 +9,6 @@ import com.yyz.base.utils.StringUtils;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzoneShare;
-import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
-import com.tencent.mm.opensdk.modelmsg.WXImageObject;
-import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.opensdk.modelmsg.WXMusicObject;
-import com.tencent.mm.opensdk.modelmsg.WXTextObject;
-import com.tencent.mm.opensdk.modelmsg.WXVideoObject;
-import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
-import com.tencent.mm.opensdk.openapi.IWXAPI;
-import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
@@ -53,135 +44,135 @@ public class Share {
      * @param shareText 分享文本
      * @param share     分享渠道
      */
-    public static void weChatText(@NonNull Activity act, @NonNull String shareText, @NonNull int share) {
-        //初始化一个WXTextObject对象，填写分享内容
-        WXTextObject wxTextObject = new WXTextObject();
-        wxTextObject.text = shareText;
-
-        //用WXTextObject对象初始化WXMediaMessage
-        WXMediaMessage wxMediaMessage = new WXMediaMessage();
-        wxMediaMessage.mediaObject = wxTextObject;
-        wxMediaMessage.description = shareText;
-        //调用分享
-        shareWeChat(act, wxMediaMessage, "text", share);
-    }
-
-    /**
-     * 微信分享 图片
-     *
-     * @param act              上下文
-     * @param imagePath        图片url
-     * @param shareTitle       标题
-     * @param shareDescription 描述
-     * @param share            分享渠道
-     */
-    // TODO 缩略图问题待解决
-    public static void weChatImage(@NonNull Activity act, @NonNull String imagePath, @NonNull String shareTitle, String shareDescription, int share) {
-        WXImageObject wxImageObject = new WXImageObject();
-        wxImageObject.imagePath = imagePath;
-
-        WXMediaMessage wxMediaMessage = new WXMediaMessage();
-        wxMediaMessage.mediaObject = wxImageObject;
-        wxMediaMessage.title = shareTitle;
-        if (shareDescription != null)
-            wxMediaMessage.description = shareDescription;
-        wxMediaMessage.thumbData = new byte[]{};  //缩略图
-        //调用分享
-        shareWeChat(act, wxMediaMessage, "img", share);
-    }
-
-    /**
-     * 微信分享  音乐
-     *
-     * @param act              上下文
-     * @param shareMusic       分享音乐url
-     * @param shareTitle       分享标题
-     * @param shareDescription 分享描述
-     * @param share            渠道
-     */
-    //TODO 缩略图问题
-    public static void weChatMusic(@NonNull Activity act, @NonNull String shareMusic, @NonNull String shareTitle, String shareDescription, int share) {
-        WXMusicObject wxMusicObject = new WXMusicObject();
-        wxMusicObject.musicUrl = shareMusic;
-
-        WXMediaMessage wxMediaMessage = new WXMediaMessage();
-        wxMediaMessage.mediaObject = wxMusicObject;
-        wxMediaMessage.title = shareTitle;
-        if (shareDescription != null)
-            wxMediaMessage.description = shareDescription;
-        wxMediaMessage.thumbData = new byte[]{};  //缩略图
-
-        //调用分享
-        shareWeChat(act, wxMediaMessage, "music", share);
-    }
-
-    /**
-     * 微信分享 视频
-     *
-     * @param act              上下文
-     * @param shareVideo       分享视频url
-     * @param shareTitle       标题
-     * @param shareDescription 描述
-     * @param share            渠道
-     */
-    public static void weChatVideo(@NonNull Activity act, @NonNull String shareVideo, @NonNull String shareTitle, String shareDescription, int share) {
-        WXVideoObject wxMusicObject = new WXVideoObject();
-        wxMusicObject.videoUrl = shareVideo;
-
-        WXMediaMessage wxMediaMessage = new WXMediaMessage();
-        wxMediaMessage.mediaObject = wxMusicObject;
-        wxMediaMessage.title = shareTitle;
-        if (shareDescription != null)
-            wxMediaMessage.description = shareDescription;
-        wxMediaMessage.thumbData = new byte[]{};  //缩略图
-
-        //调用分享
-        shareWeChat(act, wxMediaMessage, "video", share);
-    }
-
-    /**
-     * 微信分享 h5
-     *
-     * @param act              上下文
-     * @param shareWeb         h5 url
-     * @param shareTitle       标题
-     * @param shareDescription 描述
-     * @param share            渠道
-     */
-    public static void weChatWeb(@NonNull Activity act, @NonNull String shareWeb, @NonNull String shareTitle, String shareDescription, String imgUrl, int share) {
-        WXWebpageObject wxWebpageObject = new WXWebpageObject();
-        wxWebpageObject.webpageUrl = shareWeb;
-
-        WXMediaMessage wxMediaMessage = new WXMediaMessage();
-        wxMediaMessage.mediaObject = wxWebpageObject;
-        wxMediaMessage.title = shareTitle;
-        if (shareDescription != null)
-            wxMediaMessage.description = shareDescription;
-        if(imgUrl != null){
-            wxMediaMessage.thumbData = getImageFromNetByUrl(imgUrl);
-        }
+//    public static void weChatText(@NonNull Activity act, @NonNull String shareText, @NonNull int share) {
+//        //初始化一个WXTextObject对象，填写分享内容
+//        WXTextObject wxTextObject = new WXTextObject();
+//        wxTextObject.text = shareText;
+//
+//        //用WXTextObject对象初始化WXMediaMessage
+//        WXMediaMessage wxMediaMessage = new WXMediaMessage();
+//        wxMediaMessage.mediaObject = wxTextObject;
+//        wxMediaMessage.description = shareText;
+//        //调用分享
+//        shareWeChat(act, wxMediaMessage, "text", share);
+//    }
+//
+//    /**
+//     * 微信分享 图片
+//     *
+//     * @param act              上下文
+//     * @param imagePath        图片url
+//     * @param shareTitle       标题
+//     * @param shareDescription 描述
+//     * @param share            分享渠道
+//     */
+//    // TODO 缩略图问题待解决
+//    public static void weChatImage(@NonNull Activity act, @NonNull String imagePath, @NonNull String shareTitle, String shareDescription, int share) {
+//        WXImageObject wxImageObject = new WXImageObject();
+//        wxImageObject.imagePath = imagePath;
+//
+//        WXMediaMessage wxMediaMessage = new WXMediaMessage();
+//        wxMediaMessage.mediaObject = wxImageObject;
+//        wxMediaMessage.title = shareTitle;
+//        if (shareDescription != null)
+//            wxMediaMessage.description = shareDescription;
 //        wxMediaMessage.thumbData = new byte[]{};  //缩略图
-        //调用分享
-        shareWeChat(act, wxMediaMessage, "webpage", share);
-    }
-
-    private static void shareWeChat(Activity act, WXMediaMessage wxMediaMessage, String shareType, int share) {
-        //构造一个Req
-        SendMessageToWX.Req req = new SendMessageToWX.Req();
-        req.transaction = (shareType == null) ? String.valueOf(System.currentTimeMillis()) : shareType + System.currentTimeMillis();
-        req.message = wxMediaMessage;
-        if (share == 1) {
-            req.scene = SendMessageToWX.Req.WXSceneSession;  //分享会话
-        } else if (share == 2) {
-            req.scene = SendMessageToWX.Req.WXSceneTimeline;  //分享朋友圈
-        } else if (share == 3) {
-            req.scene = SendMessageToWX.Req.WXSceneFavorite;  //收藏
-        } else {
-            req.scene = SendMessageToWX.Req.WXSceneSession;  //分享会话
-        }
-        IWXAPI msgApi = WXAPIFactory.createWXAPI(act, "");
-        msgApi.sendReq(req);
-    }
+//        //调用分享
+//        shareWeChat(act, wxMediaMessage, "img", share);
+//    }
+//
+//    /**
+//     * 微信分享  音乐
+//     *
+//     * @param act              上下文
+//     * @param shareMusic       分享音乐url
+//     * @param shareTitle       分享标题
+//     * @param shareDescription 分享描述
+//     * @param share            渠道
+//     */
+//    //TODO 缩略图问题
+//    public static void weChatMusic(@NonNull Activity act, @NonNull String shareMusic, @NonNull String shareTitle, String shareDescription, int share) {
+//        WXMusicObject wxMusicObject = new WXMusicObject();
+//        wxMusicObject.musicUrl = shareMusic;
+//
+//        WXMediaMessage wxMediaMessage = new WXMediaMessage();
+//        wxMediaMessage.mediaObject = wxMusicObject;
+//        wxMediaMessage.title = shareTitle;
+//        if (shareDescription != null)
+//            wxMediaMessage.description = shareDescription;
+//        wxMediaMessage.thumbData = new byte[]{};  //缩略图
+//
+//        //调用分享
+//        shareWeChat(act, wxMediaMessage, "music", share);
+//    }
+//
+//    /**
+//     * 微信分享 视频
+//     *
+//     * @param act              上下文
+//     * @param shareVideo       分享视频url
+//     * @param shareTitle       标题
+//     * @param shareDescription 描述
+//     * @param share            渠道
+//     */
+//    public static void weChatVideo(@NonNull Activity act, @NonNull String shareVideo, @NonNull String shareTitle, String shareDescription, int share) {
+//        WXVideoObject wxMusicObject = new WXVideoObject();
+//        wxMusicObject.videoUrl = shareVideo;
+//
+//        WXMediaMessage wxMediaMessage = new WXMediaMessage();
+//        wxMediaMessage.mediaObject = wxMusicObject;
+//        wxMediaMessage.title = shareTitle;
+//        if (shareDescription != null)
+//            wxMediaMessage.description = shareDescription;
+//        wxMediaMessage.thumbData = new byte[]{};  //缩略图
+//
+//        //调用分享
+//        shareWeChat(act, wxMediaMessage, "video", share);
+//    }
+//
+//    /**
+//     * 微信分享 h5
+//     *
+//     * @param act              上下文
+//     * @param shareWeb         h5 url
+//     * @param shareTitle       标题
+//     * @param shareDescription 描述
+//     * @param share            渠道
+//     */
+//    public static void weChatWeb(@NonNull Activity act, @NonNull String shareWeb, @NonNull String shareTitle, String shareDescription, String imgUrl, int share) {
+//        WXWebpageObject wxWebpageObject = new WXWebpageObject();
+//        wxWebpageObject.webpageUrl = shareWeb;
+//
+//        WXMediaMessage wxMediaMessage = new WXMediaMessage();
+//        wxMediaMessage.mediaObject = wxWebpageObject;
+//        wxMediaMessage.title = shareTitle;
+//        if (shareDescription != null)
+//            wxMediaMessage.description = shareDescription;
+//        if(imgUrl != null){
+//            wxMediaMessage.thumbData = getImageFromNetByUrl(imgUrl);
+//        }
+////        wxMediaMessage.thumbData = new byte[]{};  //缩略图
+//        //调用分享
+//        shareWeChat(act, wxMediaMessage, "webpage", share);
+//    }
+//
+//    private static void shareWeChat(Activity act, WXMediaMessage wxMediaMessage, String shareType, int share) {
+//        //构造一个Req
+//        SendMessageToWX.Req req = new SendMessageToWX.Req();
+//        req.transaction = (shareType == null) ? String.valueOf(System.currentTimeMillis()) : shareType + System.currentTimeMillis();
+//        req.message = wxMediaMessage;
+//        if (share == 1) {
+//            req.scene = SendMessageToWX.Req.WXSceneSession;  //分享会话
+//        } else if (share == 2) {
+//            req.scene = SendMessageToWX.Req.WXSceneTimeline;  //分享朋友圈
+//        } else if (share == 3) {
+//            req.scene = SendMessageToWX.Req.WXSceneFavorite;  //收藏
+//        } else {
+//            req.scene = SendMessageToWX.Req.WXSceneSession;  //分享会话
+//        }
+//        IWXAPI msgApi = WXAPIFactory.createWXAPI(act, "");
+//        msgApi.sendReq(req);
+//    }
 
 
     /****
