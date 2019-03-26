@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--上拉加载更多字体颜色/网络超时提示文字颜色-->
+    <color name="color_999999">#999999</color>
+    <!--网络超时提示文字颜色-->
+    <color name="color_c4c4c4">#c4c4c4</color>
+
+    <!--适配魅族锤子的背景白色-->
+    <color name="color_fffffe">#fffffe</color>
+
+    <!--主题所用统一背景色-->
+    <color name="background_color">#f7f7f7</color>
+
+    <color name="color_recycler_view_lines">#959595</color>
+    <color name="base_color_ffffff">#ffffff</color>
+    <color name="base_color_ffc114">#ffc114</color>
+    <color name="base_color_333333">#333333</color>
+
+    <color name="base_color_66000000">#66000000</color>
+    <color name="base_color_dddddd">#dddddd</color>
+    <color name="base_color_c7c7c7">#c7c7c7</color>
+    <color name="base_color_666666">#666666</color>
+
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:clickable="false"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/base_error_iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/search_empty" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/base_error_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/search_sorry"
+        android:textColor="@color/color_999999"
+        android:textSize="16dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/base_error_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/search_empty"
+        android:textColor="@color/color_c4c4c4"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

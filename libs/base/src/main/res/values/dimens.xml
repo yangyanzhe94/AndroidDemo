@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="textandiconmargin">10dp</dimen>
+    <dimen name="foot_view_height">60dp</dimen>
+    <dimen name="text_view_size">5sp</dimen>
+    <dimen name="recycler_view_lines">0.5dp</dimen>
+
+    <dimen name="px_5_ne">-5dp</dimen>
+    <dimen name="px_8_ne">-8dp</dimen>
+    <dimen name="px_1">1dp</dimen>
+    <dimen name="px_2">2dp</dimen>
+    <dimen name="px_5">5dp</dimen>
+
+    <dimen name="px_6">6dp</dimen>
+    <dimen name="px_7">7dp</dimen>
+
+    <dimen name="px_8">8dp</dimen>
+    <dimen name="px_9">9dp</dimen>
+
+
+    <dimen name="px_10">10dp</dimen>
+    <dimen name="px_11">11dp</dimen>
+
+    <dimen name="px_14">14dp</dimen>
+    <dimen name="px_15">15dp</dimen>
+    <dimen name="px_16">16dp</dimen>
+    <dimen name="px_23">23dp</dimen>
+    <dimen name="px_24">24dp</dimen>
+
+    <dimen name="px_18">18dp</dimen>
+    <dimen name="px_27">27dp</dimen>
+    <dimen name="px_30">30dp</dimen>
+
+    <dimen name="px_40">40dp</dimen>
+    <dimen name="px_44">44dp</dimen>
+    <dimen name="px_45">45dp</dimen>
+    <dimen name="px_46">46dp</dimen>
+
+    <dimen name="px_60">60dp</dimen>
+    <dimen name="px_79">79dp</dimen>
+
+    <dimen name="px_100">100dp</dimen>
+    <dimen name="px_174">174dp</dimen>
+
+
+</resources>

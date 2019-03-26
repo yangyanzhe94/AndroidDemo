@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_60"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_60"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--style="@android:style/Widget.ProgressBar"-->
+        <!--style="?android:attr/progressBarStyle"-->
+        <ProgressBar
+            android:id="@+id/foot_pb"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_width="@dimen/px_40"
+            android:layout_height="@dimen/px_40"
+            android:indeterminateDrawable="@drawable/progressbar_rotate"
+            android:layout_gravity="center" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/foot_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_6"
+            android:text="加载中..."
+            android:textColor="@color/base_color_666666"
+            android:textSize="@dimen/px_16" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_15"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/input_delete_dot"
+            android:layout_width="@dimen/px_6"
+            android:layout_height="@dimen/px_6"
+            android:layout_marginRight="@dimen/px_6"
+            android:layout_marginTop="@dimen/px_14"
+            android:background="@drawable/bg_input_delete_dot" />
+
+        <com.yyz.base.customview.InputThree.ExtendEditText
+            android:id="@+id/input_delete_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/input_delete_dot"
+            android:background="@drawable/bg_view_input_box"
+            android:gravity="top"
+            android:hint="@string/input_box_hint"
+            android:maxLength="50"
+            android:minLines="3"
+            android:paddingBottom="@dimen/px_7"
+            android:paddingLeft="@dimen/px_10"
+            android:paddingRight="@dimen/px_10"
+            android:paddingTop="@dimen/px_9"
+            android:textColor="@color/base_color_333333"
+            android:textColorHint="@color/base_color_c7c7c7"
+            android:textSize="@dimen/px_14" />
+
+        <View
+            android:id="@+id/input_delete_delete"
+            android:layout_width="@dimen/px_15"
+            android:layout_height="@dimen/px_15"
+            android:layout_alignBottom="@+id/input_delete_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/px_8"
+            android:layout_marginRight="@dimen/px_8"
+            android:background="@drawable/ic_data_delete" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="BaseTheme" parent="BaseAppTheme"></style>-->
+
+    <!--<style name="AlbumTheme" parent="Theme.AppCompat.NoActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+    <!--</style>-->
+
+    <!--<style name="BaseAppTheme.NoActionBar">-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash;Toolbar 主题&ndash;&gt;-->
+    <!--<style name="ToolbarTheme" parent="Theme.AppCompat.Light">-->
+        <!--&lt;!&ndash; 箭头 &ndash;&gt;-->
+        <!--<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>-->
+        <!--&lt;!&ndash; 更换Toolbar OVerFlow menu icon &ndash;&gt;-->
+        <!--<item name="actionOverflowButtonStyle">@style/OverFlow</item>-->
+        <!--&lt;!&ndash; 设置 显示在toolbar上菜单文字的颜色 &ndash;&gt;-->
+        <!--<item name="actionMenuTextColor">@android:color/white</item>-->
+        <!--&lt;!&ndash; 设置toolbar 弹出菜单的字体大小和溢出菜单文字大小&ndash;&gt;-->
+        <!--<item name="android:textSize">15sp</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash; 左边的箭头指示&ndash;&gt;-->
+    <!--<style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">-->
+        <!--<item name="spinBars">true</item>-->
+        <!--<item name="color">@android:color/white</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash; 溢出 &ndash;&gt;-->
+    <!--<style name="OverFlow" parent="Widget.AppCompat.ActionButton.Overflow">-->
+        <!--<item name="android:src">@drawable/home</item>-->
+        <!--&lt;!&ndash; 设置 toolbar 溢出菜单的文字的颜色 &ndash;&gt;-->
+        <!--<item name="android:textColor">@android:color/holo_red_dark</item>-->
+    <!--</style>-->
+
+
+
+    <!--<style name="txt_lab" parent="TextAppearance.AppCompat">-->
+        <!--&lt;!&ndash; 默认状态提示颜色和字体&ndash;&gt;-->
+        <!--<item name="android:textColorHint">#8c8c8c</item>-->
+        <!--<item name="android:textSize">14sp</item>-->
+        <!--&lt;!&ndash; 下面可以根据需要设置，如果没有将默认使用默认theme的颜色 &ndash;&gt;-->
+        <!--&lt;!&ndash; Label标签的颜色 &ndash;&gt;-->
+        <!--<item name="colorAccent">#FFFFFF</item>-->
+        <!--&lt;!&ndash; 默认状态状态设置底线颜色 &ndash;&gt;-->
+        <!--<item name="colorControlNormal">#FFFFFF</item>-->
+        <!--&lt;!&ndash; 选择的底线颜色 &ndash;&gt;-->
+        <!--<item name="colorControlActivated">#FFFFFF</item>-->
+        <!--<item name="android:textCursorDrawable">@drawable/cursor_color</item>-->
+    <!--</style>-->
+
+
+    <!--&lt;!&ndash;设置继承appcompat的activity透明主题&ndash;&gt;-->
+    <!--<style name="CustomTransparentActivity" parent="Theme.AppCompat.NoActionBar">-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--&lt;!&ndash;<item name="android:windowAnimationStyle">@android:style/Animation</item>&ndash;&gt;-->
+        <!--<item name="android:windowAnimationStyle">@style/AnimationActivity</item>-->
+    <!--</style>-->
+
+    <!--<style name="AnimationActivity" mce_bogus="1" parent="@android:style/Animation.Activity">-->
+        <!--<item name="android:activityOpenEnterAnimation">@anim/base_slide_right_in</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/base_slide_right_out</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/base_slide_right_in</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/base_slide_right_out</item>-->
+    <!--</style>-->
+
+
+
+
+    <!--&lt;!&ndash; 加载load &ndash;&gt;-->
+    <!--<style name="custom_progressBar" parent="@android:style/Widget.ProgressBar.Small.Inverse">-->
+        <!--<item name="android:layout_width">20dp</item>-->
+        <!--<item name="android:layout_height">20dp</item>-->
+        <!--<item name="android:indeterminateDrawable">@drawable/progressbar_loading</item>-->
+    <!--</style>-->
+
+    <!--<style name="ProgressBar" parent="android:Widget.ProgressBar">-->
+        <!--<item name="android:minWidth">@dimen/abc_action_bar_progress_bar_size</item>-->
+        <!--<item name="android:maxWidth">@dimen/abc_action_bar_progress_bar_size</item>-->
+        <!--<item name="android:minHeight">@dimen/abc_action_bar_progress_bar_size</item>-->
+        <!--<item name="android:maxHeight">@dimen/abc_action_bar_progress_bar_size</item>-->
+        <!--<item name="android:color">@color/color_007aff</item>-->
+    <!--</style>-->
+
+
+    <!--<style name="dialog" parent="android:style/Theme.Dialog">-->
+        <!--<item name="android:windowIsFloating"> true </item>&lt;!&ndash; 是否浮现在activity之上 &ndash;&gt;-->
+        <!--<item name="android:windowIsTranslucent">true</item>&lt;!&ndash; 半透明 &ndash;&gt;-->
+        <!--&lt;!&ndash; 边框 &ndash;&gt;-->
+        <!--<item name="android:windowFrame">@null</item >-->
+        <!--&lt;!&ndash; 没有标题 &ndash;&gt;-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--&lt;!&ndash; 对话框的内容窗口背景色:让整个对话框的背景为透明&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--&lt;!&ndash; 整个屏幕背景是透明的 &ndash;&gt;-->
+            <!--&lt;!&ndash;<item name="android:background">@android:color/transparent</item> &ndash;&gt;-->
+        <!--&lt;!&ndash; 整个屏幕背景的灰度值：默认是黑色的 ：遮障层的灰度&ndash;&gt;-->
+         <!--<item name="android:backgroundDimAmount">0.5</item>-->
+        <!--&lt;!&ndash; dialog的整个屏幕的背景是否有遮障层  当设置这个最后时，上边两行不起作用&ndash;&gt;-->
+        <!--<item name="android:backgroundDimEnabled">false</item>-->
+        <!--&lt;!&ndash; 重要，Dialog进出的显示动画 &ndash;&gt;-->
+        <!--<item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>-->
+        <!--&lt;!&ndash; 是否有覆盖 &ndash;&gt;-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+
+    <!--</style>-->
+
+    <style name="album_toolbar_theme">
+        <item name="actionMenuTextColor">#ffffff</item>
+    </style>
+    <style name="album_toolbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:theme">@style/album_toolbar_theme</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="titleTextColor">#333333</item>
+        <item name="subtitleTextColor">#333333</item>
+        <item name="navigationIcon">@drawable/btn_back</item>
+    </style>
+
+
+    <style name="rating_bar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#808080</item>
+        <item name="colorControlActivated">#f56121</item>
+    </style>
+
+    <!--资料页面左侧红点-->
+    <style name="data_left_dot">
+        <item name="android:layout_width">@dimen/px_6</item>
+        <item name="android:layout_height">@dimen/px_6</item>
+        <item name="android:layout_marginTop">@dimen/px_6</item>
+        <item name="android:background">@drawable/bg_input_delete_dot</item>
+    </style>
+
+
+    <!--资料页面dot右侧文字-->
+    <style name="data_dot_right_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/px_15</item>
+        <item name="android:layout_marginLeft">@dimen/px_6</item>
+        <item name="android:textColor">@color/base_color_333333</item>
+        <item name="android:textSize">@dimen/px_14</item>
+        <item name="android:lineSpacingExtra">@dimen/px_5</item>
+    </style>
+
+
+
+</resources>

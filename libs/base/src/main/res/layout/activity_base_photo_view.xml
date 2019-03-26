@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+
+    <com.yyz.base.photoview.view.HackyViewPager
+        android:id="@+id/base_photo_view_hacky_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/base_photo_view_toolbar"
+        style="@style/album_toolbar"
+        android:background="#00000000" />
+
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/base_photo_view_appCompatCheckBox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:padding="10dp" />
+
+</FrameLayout>
+

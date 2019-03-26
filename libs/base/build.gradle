@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.androidTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation deps.junit
+    androidTestImplementation deps.runner
+    androidTestImplementation deps.espresso
+
+    api deps.constraint
+    api deps.appcompat
+    api deps.design
+    api deps.recyclerview
+    api deps.cardview
+
+    api deps.retrofit
+    api deps.gson
+    api deps.scalars
+    api deps.interceptor
+    api deps.fastjson
+    api deps.eventbus
+    api deps.glide
+    api deps.transformations
+    api deps.rxpermissions
+    api deps.rxjava
+    api deps.animators
+    api deps.ultimatebar
+    api deps.times
+
+    //    //支付
+    //    compile files('libs/alipaySdk-20160120.jar')
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //    //QQ登录
+    //    compile files('libs/open_sdk_r5886_lite.jar')
+    //    //新浪登录
+    //    compile 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar'
+    //    compile files('libs/bcprov-jdk15-143.jar')
+}

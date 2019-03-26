@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="srlDrawableSize" format="dimension"/><!--图片尺寸-->
+    <attr name="srlDrawableArrowSize" format="dimension"/><!--箭头图片尺寸-->
+    <attr name="srlDrawableProgressSize" format="dimension"/><!--箭头图片尺寸-->
+    <attr name="srlDrawableMarginRight" format="dimension"/><!--图片和文字的间距-->
+    <attr name="srlTextSizeTitle" format="dimension"/><!--标题字体-->
+    <attr name="srlTextSizeTime" format="dimension"/><!--时间字体-->
+    <attr name="srlFinishDuration" format="integer"/><!--完成时停留时间-->
+    <attr name="srlPrimaryColor" format="color"/><!--主要颜色-->
+    <attr name="srlAccentColor" format="color"/><!--强调颜色-->
+    <attr name="srlDrawableArrow" format="reference"/><!--箭头图片-->
+    <attr name="srlDrawableProgress" format="reference"/><!--转动图片-->
+    <attr name="srlEnableHorizontalDrag" format="boolean"/><!--支持水平拖动-->
+
+    <attr name="srlClassicsSpinnerStyle" format="enum">
+        <enum name="Translate" value="0"/><!--平行移动-->
+        <enum name="Scale" value="1"/><!--拉伸形变-->
+        <enum name="FixedBehind" value="2"/><!--固定在背后-->
+    </attr>
+
+    <attr name="layout_srlSpinnerStyle" format="enum">
+        <enum name="Translate" value="0"/><!--平行移动-->
+        <enum name="Scale" value="1"/><!--拉伸形变-->
+        <enum name="FixedBehind" value="2"/><!--固定在背后-->
+        <enum name="FixedFront" value="3"/><!--固定在前面-->
+        <enum name="MatchLayout" value="4"/><!--填满布局-->
+    </attr>
+
+    <declare-styleable name="refreshLayout">
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+        <attr name="srlReboundDuration" format="integer"/>
+        <attr name="srlHeaderHeight" format="dimension"/>
+        <attr name="srlFooterHeight" format="dimension"/>
+        <attr name="srlDragRate" format="float"/>
+        <attr name="srlHeaderMaxDragRate" format="float"/>
+        <attr name="srlFooterMaxDragRate" format="float"/>
+        <attr name="srlEnableRefresh" format="boolean"/>
+        <attr name="srlEnableLoadMore" format="boolean"/>
+        <attr name="srlEnableHeaderTranslationContent" format="boolean"/>
+        <attr name="srlEnableFooterTranslationContent" format="boolean"/>
+        <attr name="srlEnablePreviewInEditMode" format="boolean"/>
+        <attr name="srlEnableAutoLoadMore" format="boolean"/>
+        <attr name="srlEnableOverScrollBounce" format="boolean"/>
+        <attr name="srlEnablePureScrollMode" format="boolean"/>
+        <attr name="srlEnableNestedScrolling" format="boolean"/>
+        <attr name="srlEnableScrollContentWhenLoaded" format="boolean"/>
+        <attr name="srlEnableLoadMoreWhenContentNotFull" format="boolean"/>
+        <attr name="srlDisableContentWhenRefresh" format="boolean"/>
+        <attr name="srlDisableContentWhenLoading" format="boolean"/>
+        <attr name="srlFixedHeaderViewId" format="reference"/>
+        <attr name="srlFixedFooterViewId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="refreshLayout_Layout">
+        <attr name="layout_srlSpinnerStyle"/>
+        <attr name="layout_srlBackgroundColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="BezierRadarHeader">
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+        <attr name="srlEnableHorizontalDrag"/>
+    </declare-styleable>
+
+    <declare-styleable name="BallPulseFooter">
+        <attr name="srlClassicsSpinnerStyle"/>
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClassicsHeader">
+        <attr name="srlClassicsSpinnerStyle"/>
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+        <attr name="srlFinishDuration"/>
+        <attr name="srlDrawableArrow"/>
+        <attr name="srlDrawableProgress"/>
+        <attr name="srlDrawableMarginRight"/>
+        <attr name="srlDrawableSize"/>
+        <attr name="srlDrawableArrowSize"/>
+        <attr name="srlDrawableProgressSize"/>
+        <attr name="srlTextSizeTitle"/>
+        <attr name="srlTextSizeTime"/>
+        <attr name="srlTextTimeMarginTop" format="dimension"/>
+        <attr name="srlEnableLastTime" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClassicsFooter">
+        <attr name="srlClassicsSpinnerStyle"/>
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+        <attr name="srlFinishDuration"/>
+        <attr name="srlTextSizeTitle"/>
+        <attr name="srlDrawableArrow"/>
+        <attr name="srlDrawableProgress"/>
+        <attr name="srlDrawableMarginRight"/>
+        <attr name="srlDrawableSize"/>
+        <attr name="srlDrawableArrowSize"/>
+        <attr name="srlDrawableProgressSize"/>
+    </declare-styleable>
+
+    <!--评分星星控件-->
+    <declare-styleable name="RatingBar">
+        <!--星星间距-->
+        <attr format="dimension" name="starDistance"/>
+        <!--星星大小-->
+        <attr format="dimension" name="starSize"/>
+        <!--星星个数-->
+        <attr format="integer" name="starCount"/>
+        <!--星星空图-->
+        <attr format="reference" name="starEmpty"/>
+        <!--星星满图-->
+        <attr format="reference" name="starFill"/>
+        <!--是否固定不可点击选择星级-->
+        <attr format="boolean" name="isIndicator"/>
+    </declare-styleable>
+
+    <!--圆图控件-->
+    <declare-styleable name="CircularImageView">
+        <attr name="border" format="boolean"></attr>
+        <attr name="user_border_width" format="dimension"></attr>
+        <attr name="user_border_color" format="color"></attr>
+        <attr name="shadow" format="boolean"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CropCircleImageViewNew">
+        <attr name="background_color" format="color" />
+        <attr name="stroke_color" format="color" />
+        <attr name="stroke_width" format="dimension" />
+    </declare-styleable>
+
+
+    <!--删除添加输入控件-->
+    <declare-styleable name="InputThree">
+        <!--hintText-->
+        <attr name="hint_text" format="string" />
+        <attr name="title" format="string" />
+        <!--显示类型 默认为输入框-->
+        <attr name="show_type" format="integer" />
+    </declare-styleable>
+
+    <!--删除添加输入控件-->
+    <declare-styleable name="InputBoxView">
+        <!--hintText-->
+        <attr name="ibv_hint_text" format="string" />
+    </declare-styleable>
+
+    <!--上传头像控件-->
+    <declare-styleable name="UploadAvatarView">
+        <attr name="uavTitle" format="string" />
+        <!--显示类型，0为默认，为点击状态，1位显示状态-->
+        <attr name="uavShowType" format="integer" />
+    </declare-styleable>
+</resources>

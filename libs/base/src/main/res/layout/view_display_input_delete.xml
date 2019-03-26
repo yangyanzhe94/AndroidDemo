@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/personal_data_display_reward_ll_one"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/px_15"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View style="@style/data_left_dot" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/data_display_tv_content"
+        style="@style/data_dot_right_content"
+        tools:text="我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字我们五个字" />
+</LinearLayout>

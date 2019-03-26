@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/inputThreeTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/base_color_666666"
+            android:textSize="@dimen/px_14"
+            tools:text="@string/input_delete_hint" />
+
+
+        <ImageView
+            android:id="@+id/inputThreeAdd"
+            android:layout_width="@dimen/px_15"
+            android:layout_height="@dimen/px_15"
+            android:layout_marginEnd="@dimen/px_8"
+            android:layout_marginRight="@dimen/px_8"
+            android:background="@drawable/ic_data_plus"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/inputThreeRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
