@@ -1,4 +1,4 @@
-package com.ihandy.feast.androiddemo;
+package com.yyz.androiddemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

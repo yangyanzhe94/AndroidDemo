@@ -1,4 +1,4 @@
-package com.ihandy.feast.androiddemo;
+package com.yyz.androiddemo;
 
 import org.junit.Test;
 
