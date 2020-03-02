@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.shorttestapplication.MainActivity">
+
+    <item
+        android:id="@+id/btn_get_app_info_detail_all"
+        android:orderInCategory="100"
+        android:title="显示所有详情"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/btn_get_app_info_detail_go_setting"
+        android:orderInCategory="100"
+        android:title="跳转获取权限界面"
+        app:showAsAction="never" />
+</menu>
